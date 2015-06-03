@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EWPlayingViewController">
+            <connections>
+                <outlet property="lrcView" destination="sd0-Sc-6hi" id="QCz-FU-WrT"/>
+                <outlet property="musicBackgroundIcon" destination="JKg-Bt-iXh" id="qeI-Wy-TOv"/>
+                <outlet property="musicButtonsView" destination="80j-AI-GZS" id="bOT-c2-O6f"/>
+                <outlet property="musicName" destination="wNN-LX-Ssi" id="W50-Ev-KLE"/>
+                <outlet property="musicProgress" destination="flA-Fa-6E9" id="67f-bC-8JV"/>
+                <outlet property="playMode" destination="4TP-CJ-IAo" id="2mo-jC-RVT"/>
+                <outlet property="playModeLabel" destination="bxu-HR-CZa" id="ea4-or-8Ih"/>
+                <outlet property="playOrPause" destination="z7h-TQ-4o8" id="C9E-qv-nJI"/>
+                <outlet property="playingTime" destination="dDG-Zq-YDz" id="EaF-4a-B3E"/>
+                <outlet property="singer" destination="ROV-sb-B3D" id="bm0-3U-coA"/>
+                <outlet property="totalTime" destination="zuU-WS-sTk" id="tHC-TX-lJ8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="musicBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-Bt-iXh" userLabel="音乐背景图片">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80j-AI-GZS" userLabel="播放按钮界面">
+                    <rect key="frame" x="0.0" y="468" width="320" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TP-CJ-IAo" userLabel="播放模式">
+                            <rect key="frame" x="8" y="35" width="39" height="30"/>
+                            <state key="normal" image="circleOpen">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="randomOpen"/>
+                            <connections>
+                                <action selector="playMode:" destination="-1" eventType="touchUpInside" id="Ocw-S2-1XS"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDG-Zq-YDz">
+                            <rect key="frame" x="8" y="6" width="28" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-WS-sTk" userLabel="总时间长">
+                            <rect key="frame" x="284" y="6" width="28" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHE-QU-v2S" userLabel="上一首">
+                            <rect key="frame" x="77" y="35" width="39" height="30"/>
+                            <state key="normal" image="aboveMusic">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="previousMusic" destination="-1" eventType="touchUpInside" id="Xch-Kb-X2W"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAm-0n-eNE" userLabel="下一首">
+                            <rect key="frame" x="204" y="35" width="39" height="30"/>
+                            <state key="normal" image="nextMusic">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextMusic" destination="-1" eventType="touchUpInside" id="WYf-bD-CJD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AA9-Za-iTC" userLabel="播放列表">
+                            <rect key="frame" x="264" y="35" width="39" height="30"/>
+                            <state key="normal" image="menu">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="musicList:" destination="-1" eventType="touchUpInside" id="tdB-5D-ohv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-TQ-4o8" userLabel="播放暂停">
+                            <rect key="frame" x="124" y="25" width="72" height="50"/>
+                            <state key="normal" image="play">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="pause"/>
+                            <connections>
+                                <action selector="playOrPauseMusic" destination="-1" eventType="touchUpInside" id="9zu-5Q-iGq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQo-A6-xWT" userLabel="导航栏">
+                    <rect key="frame" x="0.0" y="2" width="320" height="62"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暂无歌曲" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-LX-Ssi" userLabel="歌曲">
+                            <rect key="frame" x="62" y="24" width="171" height="14"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROV-sb-B3D" userLabel="歌手">
+                            <rect key="frame" x="62" y="40" width="171" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-No-vLt">
+                            <rect key="frame" x="275" y="27" width="20" height="20"/>
+                            <state key="normal" image="share">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="shareMusic" destination="-1" eventType="touchUpInside" id="kku-oY-IhK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyB-AE-xTQ" userLabel="后退">
+                            <rect key="frame" x="14" y="22" width="33" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="后退">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="exit" destination="-1" eventType="touchUpInside" id="Cxz-WF-Mjw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                </view>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="flA-Fa-6E9" userLabel="音乐进度条">
+                    <rect key="frame" x="-30" y="437" width="380" height="31"/>
+                </slider>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-Sc-6hi" userLabel="歌词界面" customClass="EWLrcView">
+                    <rect key="frame" x="0.0" y="63" width="320" height="404"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxu-HR-CZa" userLabel="播放模式label">
+                            <rect key="frame" x="128" y="338" width="64" height="28"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="383" y="479"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aboveMusic" width="78" height="60"/>
+        <image name="circleOpen" width="78" height="60"/>
+        <image name="menu" width="78" height="60"/>
+        <image name="musicBackground" width="290" height="515"/>
+        <image name="nextMusic" width="39" height="30"/>
+        <image name="pause" width="78" height="60"/>
+        <image name="play" width="78" height="60"/>
+        <image name="randomOpen" width="78" height="60"/>
+        <image name="share" width="30" height="30"/>
+    </resources>
+</document>

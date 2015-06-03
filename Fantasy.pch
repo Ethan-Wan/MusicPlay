@@ -1,0 +1,83 @@
+//
+//  Fantasy.pch
+//  Fantasy
+//
+//  Created by wansy on 15/5/17.
+//  Copyright (c) 2015年 wansy. All rights reserved.
+//
+
+#ifndef Fantasy_Fantasy_pch
+#define Fantasy_Fantasy_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "UIView+Extension.h"
+
+#define miniPlayheight 60
+#define navigationBarMaxY 64
+#define animateDuration 0.5
+
+
+#define imageViewCount 4
+#define storyBoard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
+
+#define SUCCESS @"success"
+
+//新浪接口相关参数
+#define EWClientId @"2689950576"
+#define EWClientSecret @"ef2bfd74de9cbedb83b3629d1371d890"
+#define EWRedirectUri @"http://tv.sohu.com/"
+#define EWGrantType @"authorization_code"
+
+//土豆视屏相关参数
+#define EWAppKey @"90cd82213f2d9f2d"
+#define EWAppSecret @"f42e32185e73ec94134284ddb05f7622"
+#define EWMVChannelId @"14" //mv频道
+#define EWTDRedirectUri @"http://weibo.com/u/2093127147/home?wvr=5"
+
+
+//豆瓣相关参数
+#define EWApiKey  @"0a9a0dcd544db6571fce2967fce92305"
+
+//颜色
+#define EWColor(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define EWBlueColor EWColor(54, 90, 255)
+
+//屏幕
+#define screen [UIScreen mainScreen]
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
+
+//键盘
+#define keyboardH 568
+
+//documentPath
+#define documentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
+//NotificationName
+#define EWUserInfoDidChangeNotification @"EWUserInfoDidChangeNotification"
+#define EWUserInfoDidExitNotification @"EWUserInfoDidExitNotification"
+#define EWLoginDidSuccessNotification @"EWLoginDidSuccessNotification"
+#define EWAccountModifyNotification @"EWAccountModifyNotification"
+#define EWSinaDidSelectedNotification @"EWSinaDidSelectedNotification"
+#define EWSinaShareDidClickNotification @"EWSinaShareDidClickNotification"
+#define EWOAuthSuccessNotification @"EWOAuthSuccessNotification"
+#define EWUserIconNotification @"EWUserIconNotification"
+#define EWMoviePlayingNotification @"EWMoviePlayingNotification"
+#define EWSearchBarDidClickedNotification @"EWSearchBarDidClickedNotification"
+#define EWNickNameDidChangeNotification @"EWNickNameDidChangeNotification"
+#define EWTDOAuthNotification @"EWTDOAuthNotification"
+
+//reviewCell的相关系数
+#define EWintervalH 10
+#define EWintervalV 5
+#define EWintervalM 5
+
+#define EWReviewTextFont [UIFont systemFontOfSize:14]
+#define EWReviewLocationFont [UIFont systemFontOfSize:12]
+#define EWReviewNickNameFont [UIFont systemFontOfSize:12]
+#define EWReviewTimeFont [UIFont systemFontOfSize:10]
+
+#endif

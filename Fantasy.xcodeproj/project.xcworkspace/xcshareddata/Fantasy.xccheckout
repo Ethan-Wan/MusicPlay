@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AB54B577-7792-4381-86B7-A4E2C1996862</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Fantasy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9245D781CAE9B5F30E0EE8094994CCE82510C9AC</key>
+		<string>github.com:Ethan-Wan/Fantasy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fantasy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9245D781CAE9B5F30E0EE8094994CCE82510C9AC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Ethan-Wan/Fantasy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9245D781CAE9B5F30E0EE8094994CCE82510C9AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9245D781CAE9B5F30E0EE8094994CCE82510C9AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Fantasy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
